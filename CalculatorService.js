@@ -2,7 +2,7 @@ var http = require ('http');
 var request = require('sync-request');
 
 const PORT = 80;
-const service_ip = process.env.MY_IP;
+const service_ip = process.env.WORKER_IP;
 
 const SUM_SERVICE_IP_PORT = 'http://'+service_ip+'31001';
 const SUB_SERVICE_IP_PORT = 'http://'+service_ip+'31002';
