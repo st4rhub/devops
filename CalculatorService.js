@@ -1,7 +1,7 @@
 var http = require ('http');
 var request = require('sync-request');
 
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 31000;
 const service_ip = process.env.MY_IP;
 
 const SUM_SERVICE_IP_PORT = service_ip+"31001";
