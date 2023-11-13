@@ -2,11 +2,14 @@ FROM node:latest
 
 WORKDIR /app
 
-COPY package.json ./
+RUN apt install -y curl
 
 RUN npm install
 
-COPY . .
+RUN npm install sync-request 
+
+COPY ./CalculatorService.js .
 
 EXPOSE 80
+
 CMD [ "node", "index.js" ]
