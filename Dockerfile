@@ -1,5 +1,7 @@
 FROM node:latest
 
+ENV MY_IP=default
+
 WORKDIR /app
 
 RUN apt install -y curl
