@@ -10,7 +10,7 @@ RUN npm install
 
 RUN npm install sync-request 
 
-COPY ./CalculatorService.js .
+COPY . .
 
 EXPOSE 80
 
