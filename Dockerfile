@@ -12,4 +12,4 @@ COPY ./CalculatorService.js .
 
 EXPOSE 80
 
-CMD [ "node", "index.js" ]
+CMD [ "node", "CalculatorService.js" ]
