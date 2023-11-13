@@ -1,6 +1,6 @@
 FROM node:latest
 
-ENV MY_IP=default
+ENV WORKER_IP=default
 
 WORKDIR /app
 
