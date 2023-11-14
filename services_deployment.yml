@@ -15,9 +15,12 @@ spec:
       labels:
         app: sum 
     spec:
+      imagePullSecrets:
+      - name: repo-secret
       containers:
       - name: sumserver
         image: yxos/sum
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
         
@@ -57,9 +60,13 @@ spec:
       labels:
         app: sub
     spec:
+      imagePullSecrets:
+        - name: repo-secret
       containers:
       - name: subserver
         image: yxos/sub
+        imagePullPolicy: Always
+
         ports:
         - containerPort: 80
         
@@ -74,7 +81,8 @@ spec:
   selector:
     app: sub
   type: NodePort
-  ports:
+  ports:      imagePullSecrets:
+        - name: repo-secret
   - protocol: TCP
     port: 8080
     targetPort: 80
@@ -94,14 +102,18 @@ spec:
   selector:
     matchLabels:
       app: mul
-  template:
+  template:      imagePullSecrets:
+        - name: repo-secret
     metadata:
       labels:
         app: mul 
     spec:
+      imagePullSecrets:
+        - name: repo-secret
       containers:
       - name: mulserver
         image: yxos/mul
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
         
@@ -122,7 +134,6 @@ spec:
     targetPort: 80
     nodePort: 31003
 
-
 ---
   
 apiVersion: apps/v1
@@ -141,9 +152,12 @@ spec:
       labels:
         app: div 
     spec:
+      imagePullSecrets:
+        - name: repo-secret
       containers:
       - name: divserver
         image: yxos/div
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
         
@@ -182,9 +196,12 @@ spec:
       labels:
         app: calculator 
     spec:
+      imagePullSecrets:
+        - name: repo-secret
       containers:
       - name: calculatorserver
         image: yxos/calculator
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
         
@@ -204,3 +221,4 @@ spec:
     port: 8080
     targetPort: 80
     nodePort: 31000
+
