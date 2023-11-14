@@ -1,6 +1,8 @@
 FROM node:latest
 
-ENV WORKER_IP=default
+ARG HIS_IP
+ENV WORKER_IP=${HIS_IP}
+
 
 WORKDIR /app
 COPY . .
