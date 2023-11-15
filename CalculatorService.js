@@ -4,10 +4,10 @@ var request = require('sync-request');
 const PORT = 80;
 const service_ip = '192.168.37.30';
 
-const SUM_SERVICE_IP_PORT = 'http://'+service_ip+'31001';
-const SUB_SERVICE_IP_PORT = 'http://'+service_ip+'31002';
-const MUL_SERVICE_IP_PORT = 'http://'+service_ip+'31003';
-const DIV_SERVICE_IP_PORT = 'http://'+service_ip+'31004';
+const SUM_SERVICE_IP_PORT = 'http://'+service_ip+':31001';
+const SUB_SERVICE_IP_PORT = 'http://'+service_ip+':31002';
+const MUL_SERVICE_IP_PORT = 'http://'+service_ip+':31003';
+const DIV_SERVICE_IP_PORT = 'http://'+service_ip+':31004';
 
 
 
