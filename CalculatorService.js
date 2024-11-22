@@ -73,7 +73,7 @@ function doOperation(a, b, operator) {
 	var reqBody = a + " " + b;
 	var service_host;
 	switch (operator) {
-		case "+": service_host= SUM_SERVICE_IP_PORT; break;
+		case "+": service_host= SUM_SERVICE_IP_PORT; console.log("Here is Sum"); break;
 		case "-": service_host= SUB_SERVICE_IP_PORT; break;
 		case "*": service_host= MUL_SERVICE_IP_PORT; break;
 		case "/": service_host= DIV_SERVICE_IP_PORT; break;
